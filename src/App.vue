@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>双向数据绑定v-model</h1>
+    用户名: <input type="text" name="" id="" v-model="username" /> 密码:
+    <input type="password" name="" id="" v-model="password" />
+    <button @click="btnFn">登录</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data() {
+    return {
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    btnFn() {
+      console.log("用户名", this.username);
+      console.log("密码: ", this.password);
+    },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
 </style>
