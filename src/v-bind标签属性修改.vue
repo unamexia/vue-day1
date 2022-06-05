@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a :href="url"></a>
+    <a :href="www.baidu.com"></a>
     <img src="" alt="">
   </div>
 </template>
